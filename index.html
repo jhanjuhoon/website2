@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Through the Viewfinder — Film Photography</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#top">35mm</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="#ritual">Ritual</a>
+        <a href="#kit">Kit</a>
+        <a href="#matcher">Film matcher</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">A slower way of seeing</p>
+          <h1>Film photography is my favorite hobby.</h1>
+          <p class="lede">
+            Thirty-six frames. No chimping. A walk with a camera that clicks like a typewriter
+            and a roll that I cannot look at until the lab is done.
+          </p>
+          <a class="btn" href="#matcher">Match a film stock</a>
+        </div>
+        <figure class="hero-frame" aria-hidden="true">
+          <div class="film-strip">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="viewfinder">
+            <div class="vf-box"></div>
+            <p>1/125 · f/8 · ISO 400</p>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="ritual" class="section">
+      <div class="wrap">
+        <h2>The ritual</h2>
+        <p class="section-intro">
+          Digital is useful. Film is the part I look forward to. Loading a canister in the shade,
+          winding until the leader catches, then spending an afternoon on one street instead of
+          a thousand thumbnails.
+        </p>
+        <ul class="steps">
+          <li>
+            <h3>Load</h3>
+            <p>A fresh roll, a light-tight back, and the tiny prayer that the sprockets actually caught.</p>
+          </li>
+          <li>
+            <h3>Walk</h3>
+            <p>Corners, bus stops, late sun on brick. I wait for a frame instead of spraying and hoping.</p>
+          </li>
+          <li>
+            <h3>Wait</h3>
+            <p>The scan email days later is still the best notification I get all week.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="kit" class="section alt">
+      <div class="wrap">
+        <h2>What I carry</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Canon AE-1</h3>
+            <p>A 1970s SLR with a shutter that still sounds expensive. Manual enough to teach me, automatic enough to keep up.</p>
+          </article>
+          <article class="card">
+            <h3>50mm f/1.8</h3>
+            <p>One lens, most days. It forces me closer and keeps the bag light enough to forget I am “out shooting.”</p>
+          </article>
+          <article class="card">
+            <h3>A notebook</h3>
+            <p>Light, place, what I thought I saw. When the scans come back, the notes are half the fun.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="matcher" class="section">
+      <div class="wrap matcher">
+        <h2>Film stock matcher</h2>
+        <p class="section-intro">
+          Answer three quick questions and I will pick a roll I would actually load for that mood.
+        </p>
+
+        <form id="film-form" class="film-form">
+          <fieldset>
+            <legend>Light</legend>
+            <label><input type="radio" name="light" value="day" required> Open daylight</label>
+            <label><input type="radio" name="light" value="gold"> Late afternoon / golden hour</label>
+            <label><input type="radio" name="light" value="night"> Neon, tungsten, after dark</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Color</legend>
+            <label><input type="radio" name="color" value="color" required> Color</label>
+            <label><input type="radio" name="color" value="bw"> Black and white</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Mood</legend>
+            <label><input type="radio" name="mood" value="soft" required> Soft and nostalgic</label>
+            <label><input type="radio" name="mood" value="punch"> Saturated and punchy</label>
+            <label><input type="radio" name="mood" value="grit"> Grainy and a little messy</label>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Recommend a roll</button>
+            <button class="btn ghost" type="reset">Reset</button>
+          </div>
+        </form>
+
+        <div id="result" class="result" hidden>
+          <p class="result-kicker">Load this</p>
+          <h3 id="result-title"></h3>
+          <p id="result-copy"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Made for a walk with thirty-six frames left.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
